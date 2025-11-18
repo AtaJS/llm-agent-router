@@ -205,3 +205,10 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+# API keys and configuration files
+config.py
+
+# test files
+test_a.py

@@ -48,12 +48,12 @@ def main():
     
     # Ask user which mode to use
     print("Select Router Mode:")
-    print("  1. Simple (rule-based, no API needed)")
-    print("  2. GPT (OpenAI - requires API key)")
-    print("  3. Claude (Anthropic - requires API key)")
-    print("  4. Gemini (Google - requires API key)")
+    print("  1. Simple (No AI)")
+    print("  2. GPT-4o (OpenAI Azure)")
+    print("  3. Claude(Not available at the moment)")
+    print("  4. Gemini-1.5-pro (Google)")
     
-    choice = input("\nEnter choice (1-4) [default: 1]: ").strip()
+    choice = input("\nEnter choice (1-4) [default: Gemini-1.5-pro]: ").strip()
     
     # Map choice to mode
     mode_map = {
@@ -61,7 +61,7 @@ def main():
         "2": "gpt",
         "3": "claude",
         "4": "gemini",
-        "": "simple"  # Default
+        "": "gemini"  # Default
     }
     
     mode = mode_map.get(choice, "simple")
@@ -86,7 +86,9 @@ def main():
             
             # Check for special commands
             if user_query.lower() in ['quit', 'exit', 'q']:
-                print("\n👋 Thank you for using our service! Goodbye!\n")
+                print("\n Thank you for using our service!")
+                print(" We wish you a healthy day!\n")
+                print("\n Goodbye!\n")
                 break
             
             if user_query.lower() == 'help':
