@@ -1,0 +1,76 @@
+{
+  "faqs": [
+    {
+      "id": 1,
+      "question": "What are your clinic hours?",
+      "answer": "Our clinic is open Monday through Friday from 8:00 AM to 6:00 PM, and Saturday from 9:00 AM to 2:00 PM. We are closed on Sundays and major holidays.",
+      "keywords": ["hours", "open", "time", "schedule", "when", "close"]
+    },
+    {
+      "id": 2,
+      "question": "Do you accept insurance?",
+      "answer": "Yes, we accept most major insurance plans including Blue Cross Blue Shield, Aetna, UnitedHealthcare, Cigna, and Medicare. Please contact our billing department to verify your specific plan coverage.",
+      "keywords": ["insurance", "payment", "coverage", "accept", "plans"]
+    },
+    {
+      "id": 3,
+      "question": "How do I book an appointment?",
+      "answer": "You can book an appointment in three ways: call us at (555) 123-4567, use our online patient portal at www.nordclinic.com/portal, or visit our clinic in person. We recommend booking at least 48 hours in advance.",
+      "keywords": ["book", "appointment", "schedule", "reserve", "make"]
+    },
+    {
+      "id": 4,
+      "question": "What services do you offer?",
+      "answer": "We offer comprehensive primary care services including annual physicals, chronic disease management, vaccinations, lab testing, minor procedures, women's health, pediatrics, and preventive care. We also provide telehealth consultations.",
+      "keywords": ["services", "offer", "treatment", "provide", "care"]
+    },
+    {
+      "id": 5,
+      "question": "Where is your clinic located?",
+      "answer": "Our main clinic is located at 123 Healthcare Drive, Suite 200, Medical District. We have free parking available and are wheelchair accessible. We also have a satellite location in Downtown at 456 Wellness Street.",
+      "keywords": ["location", "address", "where", "find", "directions"]
+    },
+    {
+      "id": 6,
+      "question": "Do you offer telehealth appointments?",
+      "answer": "Yes, we offer telehealth video appointments for many types of visits including follow-ups, medication reviews, and consultations for non-emergency conditions. You can schedule a telehealth visit through our patient portal.",
+      "keywords": ["telehealth", "virtual", "online", "video", "remote"]
+    },
+    {
+      "id": 7,
+      "question": "What is your cancellation policy?",
+      "answer": "We require at least 24 hours notice for appointment cancellations. You can cancel through our patient portal, by phone, or by email. Late cancellations or no-shows may result in a $50 fee.",
+      "keywords": ["cancel", "cancellation", "policy", "reschedule", "change"]
+    },
+    {
+      "id": 8,
+      "question": "Do you have parking available?",
+      "answer": "Yes, we have a free parking lot with over 50 spaces available for patients. The lot is located directly behind our building with easy access to the main entrance. Disabled parking spaces are available near the front entrance.",
+      "keywords": ["parking", "park", "lot", "spaces", "car"]
+    },
+    {
+      "id": 9,
+      "question": "What should I bring to my first appointment?",
+      "answer": "Please bring a valid photo ID, your insurance card, a list of current medications, any relevant medical records from previous providers, and your completed new patient forms. Arrive 15 minutes early to complete check-in.",
+      "keywords": ["bring", "first", "new", "patient", "documents", "need"]
+    },
+    {
+      "id": 10,
+      "question": "Do you see pediatric patients?",
+      "answer": "Yes, we provide comprehensive pediatric care for patients from newborn through age 18. Our pediatric services include well-child visits, vaccinations, sick visits, and developmental screenings.",
+      "keywords": ["pediatric", "children", "kids", "child", "baby", "infant"]
+    },
+    {
+      "id": 11,
+      "question": "How can I get my prescription refilled?",
+      "answer": "You can request prescription refills through our patient portal, by calling our pharmacy line at (555) 123-4568, or by asking your pharmacy to contact us directly. Please allow 48 hours for refill processing.",
+      "keywords": ["prescription", "refill", "medication", "medicine", "pharmacy"]
+    },
+    {
+      "id": 12,
+      "question": "Do you offer lab testing on-site?",
+      "answer": "Yes, we have a full-service laboratory on-site that can perform most common tests including blood work, urinalysis, and basic diagnostic testing. Results are typically available within 24-48 hours and will be accessible through your patient portal.",
+      "keywords": ["lab", "laboratory", "testing", "blood", "test", "results"]
+    }
+  ]
+}
