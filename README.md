@@ -48,9 +48,9 @@ The evaluation demonstrates that LLM-based routing achieves significantly better
 ---
 
 ## System Architecture
-```
+
 ![System Structure](system_structure.png)
-```
+
 
 **Components:**
 
