@@ -58,7 +58,7 @@ class LLMRouter:
         try:
             if self.mode == "gemini":
                 genai.configure(api_key=config.GEMINI_API_KEY)
-                self.gemini_model = genai.GenerativeModel('models/gemini-2.5-pro')
+                self.gemini_model = genai.GenerativeModel('models/gemini-2.5-flash')
                 print("Gemini API initialized")
             
             elif self.mode == "gpt":

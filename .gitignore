@@ -212,3 +212,6 @@ config.py
 
 # test files
 test_a.py
+test_b.py
+test_c.py
+test_d.py

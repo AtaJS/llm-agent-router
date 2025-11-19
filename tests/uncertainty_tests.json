@@ -1,0 +1,97 @@
+{
+  "test_name": "Uncertainty Handling Tests",
+  "description": "Tests how well the system handles ambiguous, incomplete, or nonsensical queries",
+  "total_queries": 10,
+  "uncertainty_tests": [
+    {
+      "id": 1,
+      "query": "I need to check on my test",
+      "expected_agent": "order_status",
+      "reason": "Ambiguous: 'test' could mean lab test status or test availability",
+      "uncertainty_level": "HIGH",
+      "ideal_behavior": "Makes reasonable guess or asks for clarification",
+      "acceptable_responses": ["Routes to order status", "Asks if they mean lab test"]
+    },
+    {
+      "id": 2,
+      "query": "What's the status of APT-123?",
+      "expected_agent": "order_status",
+      "reason": "Incomplete order ID (missing 2 digits) - pattern is APT-#####",
+      "uncertainty_level": "MEDIUM",
+      "ideal_behavior": "Recognizes incomplete ID, asks for complete ID or searches",
+      "acceptable_responses": ["Requests complete order ID", "Attempts to find it"]
+    },
+    {
+      "id": 3,
+      "query": "I want to book an appointment but also check on my order APT-34567",
+      "expected_agent": "order_status",
+      "reason": "Dual intent: booking + status check. Should handle one or both",
+      "uncertainty_level": "HIGH",
+      "ideal_behavior": "Prioritizes order status (has specific ID) or addresses both",
+      "acceptable_responses": ["Routes to order agent", "Acknowledges dual intent"]
+    },
+    {
+      "id": 4,
+      "query": "Purple elephant insurance Tuesday?",
+      "expected_agent": "faq",
+      "reason": "Nonsensical query - should recognize it doesn't make sense",
+      "uncertainty_level": "CRITICAL",
+      "ideal_behavior": "Asks user to rephrase or provides general help",
+      "acceptable_responses": ["Asks for clarification", "Routes to FAQ as default"]
+    },
+    {
+      "id": 5,
+      "query": "I know you can prescribe medication, what should I take?",
+      "expected_agent": "faq",
+      "reason": "User assumes false capability - must clarify system cannot prescribe",
+      "uncertainty_level": "CRITICAL",
+      "ideal_behavior": "Corrects assumption, explains it cannot prescribe, refers to doctor",
+      "acceptable_responses": ["Clarifies cannot prescribe", "Directs to healthcare provider"]
+    },
+    {
+      "id": 6,
+      "query": "appointment",
+      "expected_agent": "faq",
+      "reason": "Single word, no context - extremely ambiguous",
+      "uncertainty_level": "HIGH",
+      "ideal_behavior": "Asks what specifically user needs about appointments",
+      "acceptable_responses": ["Asks for more info", "Provides general appointment info"]
+    },
+    {
+      "id": 7,
+      "query": "How do I... wait nevermind",
+      "expected_agent": "faq",
+      "reason": "Incomplete thought - unclear what user wants",
+      "uncertainty_level": "HIGH",
+      "ideal_behavior": "Acknowledges incomplete query, offers to help",
+      "acceptable_responses": ["Asks how can I help", "Provides general assistance"]
+    },
+    {
+      "id": 8,
+      "query": "Is my thing ready?",
+      "expected_agent": "order_status",
+      "reason": "Vague reference 'thing' - likely order status but unclear",
+      "uncertainty_level": "HIGH",
+      "ideal_behavior": "Asks for order ID or more specific information",
+      "acceptable_responses": ["Requests order ID", "Routes to order agent"]
+    },
+    {
+      "id": 9,
+      "query": "Tell me everything about APT-23456 and LAB-01234",
+      "expected_agent": "order_status",
+      "reason": "Two different order IDs - system can only look up one at a time",
+      "uncertainty_level": "MEDIUM",
+      "ideal_behavior": "Looks up one or explains can check both separately",
+      "acceptable_responses": ["Provides first order info", "Acknowledges both orders"]
+    },
+    {
+      "id": 10,
+      "query": "???",
+      "expected_agent": "faq",
+      "reason": "Just question marks - no actual query content",
+      "uncertainty_level": "CRITICAL",
+      "ideal_behavior": "Recognizes no valid query, asks what user needs help with",
+      "acceptable_responses": ["Asks for question", "Offers general help menu"]
+    }
+  ]
+}

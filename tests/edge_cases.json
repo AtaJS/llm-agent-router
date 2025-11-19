@@ -1,0 +1,127 @@
+{
+  "test_name": "Edge Cases Test",
+  "description": "Tests ambiguous queries, typos, multi-intent, and unusual patterns",
+  "total_queries": 15,
+  "edge_cases": [
+    {
+      "id": 1,
+      "query": "I need help with my appointment",
+      "expected_agent": "order_status",
+      "reason": "Ambiguous - could be booking or checking status, but 'my appointment' suggests existing one",
+      "edge_type": "ambiguous",
+      "difficulty": "medium"
+    },
+    {
+      "id": 2,
+      "query": "Where is my perscription RX-11223?",
+      "expected_agent": "order_status",
+      "reason": "Typo: 'perscription' instead of 'prescription', but should still work",
+      "edge_type": "typo",
+      "difficulty": "easy"
+    },
+    {
+      "id": 3,
+      "query": "What are your hours and is my lab test LAB-67890 ready?",
+      "expected_agent": "order_status",
+      "reason": "Multi-intent: Two questions in one. Order ID present, so likely route to order status",
+      "edge_type": "multi-intent",
+      "difficulty": "hard"
+    },
+    {
+      "id": 4,
+      "query": "Do you have availibility next week?",
+      "expected_agent": "faq",
+      "reason": "Typo: 'availibility' instead of 'availability'. General booking question",
+      "edge_type": "typo",
+      "difficulty": "easy"
+    },
+    {
+      "id": 5,
+      "query": "I want to check on my test",
+      "expected_agent": "order_status",
+      "reason": "Ambiguous: 'test' could be lab test status or asking about test availability",
+      "edge_type": "ambiguous",
+      "difficulty": "high"
+    },
+    {
+      "id": 6,
+      "query": "My order number is APT 12345 what's happening with it",
+      "expected_agent": "order_status",
+      "reason": "Unusual format: Space instead of dash in order ID, no question mark",
+      "edge_type": "format_variation",
+      "difficulty": "medium"
+    },
+    {
+      "id": 7,
+      "query": "Can I reschedule or cancel my appointment for tomorrow?",
+      "expected_agent": "faq",
+      "reason": "Asking about process/policy, not specific appointment status",
+      "edge_type": "ambiguous",
+      "difficulty": "medium"
+    },
+    {
+      "id": 8,
+      "query": "Insurance question: do you take BlueCross BlueShield?",
+      "expected_agent": "faq",
+      "reason": "Variation in insurance name format, but clear FAQ question",
+      "edge_type": "format_variation",
+      "difficulty": "easy"
+    },
+    {
+      "id": 9,
+      "query": "Status for APT-23456 and also can you tell me your address?",
+      "expected_agent": "order_status",
+      "reason": "Multi-intent: Order status + location. Order ID present suggests order priority",
+      "edge_type": "multi-intent",
+      "difficulty": "hard"
+    },
+    {
+      "id": 10,
+      "query": "WHATS THE STATUS OF MY PRESCRIPTION RX-33445",
+      "expected_agent": "order_status",
+      "reason": "All caps, no punctuation - still valid order status query",
+      "edge_type": "format_variation",
+      "difficulty": "easy"
+    },
+    {
+      "id": 11,
+      "query": "I called yesterday about booking an appointmnet",
+      "expected_agent": "faq",
+      "reason": "Typo: 'appointmnet', discussing past inquiry about booking process",
+      "edge_type": "typo",
+      "difficulty": "medium"
+    },
+    {
+      "id": 12,
+      "query": "Where can I park and also what time do you close?",
+      "expected_agent": "faq",
+      "reason": "Multi-intent but both are FAQ questions",
+      "edge_type": "multi-intent",
+      "difficulty": "easy"
+    },
+    {
+      "id": 13,
+      "query": "My lab results for patient John Doe order LAB-89012",
+      "expected_agent": "order_status",
+      "reason": "Incomplete sentence, but clear order status intent with order ID",
+      "edge_type": "format_variation",
+      "difficulty": "medium"
+    },
+    {
+      "id": 14,
+      "query": "Do u accept medicare or medicaid??",
+      "expected_agent": "faq",
+      "reason": "Informal language ('u' instead of 'you'), multiple question marks",
+      "edge_type": "format_variation",
+      "difficulty": "easy"
+    },
+    {
+      "id": 15,
+      "query": "I have order apt-45678 and rx-22334 need status on both",
+      "expected_agent": "order_status",
+      "reason": "Multiple order IDs (lowercase), checking two orders at once",
+      "edge_type": "multi-intent",
+      "difficulty": "hard"
+    }
+  ]
+}
