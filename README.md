@@ -18,7 +18,7 @@ An intelligent routing system that uses Large Language Models (LLMs) to direct h
 - [Project Structure](#project-structure)
 - [Methodology](#methodology)
 - [Results Analysis](#results-analysis)
-- [Production Recommendations](#Outcome)
+- [Outcome](#Outcome)
 - [Future Work](#future-work)
 - [License](#license)
 
