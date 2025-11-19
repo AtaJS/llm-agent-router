@@ -49,32 +49,7 @@ The evaluation demonstrates that LLM-based routing achieves significantly better
 
 ## System Architecture
 ```
-┌─────────────────┐
-│  User Query     │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│      Router     │  ← Router Selection
-│ -Simple         │
-│ -LLM(Gemini/GPT)│
-└────────┬────────┘
-         │
-    ┌────┴────┐
-    │         │
-    ▼         ▼
-┌────────┐ ┌──────────┐
-│FAQ     │ │Order     │
-│Agent   │ │Status    │
-│        │ │Agent     │
-└────────┘ └──────────┘
-    │         │
-    └────┬────┘
-         │
-         ▼
-   ┌──────────┐
-   │ Response │
-   └──────────┘
+![System Structure](./system_structure.png)
 ```
 
 **Components:**
