@@ -314,8 +314,6 @@ In healthcare, assuming patient intent incorrectly can lead to confusion or miss
 
 ### Performance Trade-offs
 
-![Multi-Dimensional Comparison](evaluation/metrics_radar.png)
-
 **Speed vs Accuracy:**
 - Simple: Instant (0.000s) but 95.6% accurate
 - GPT-4: 0.466s response time with 100% accuracy
